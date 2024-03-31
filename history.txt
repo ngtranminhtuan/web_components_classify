@@ -1,0 +1,37 @@
+Downloading https://github.com/ultralytics/assets/releases/download/v8.1.0/yolov8n-cls.pt to 'yolov8n-cls.pt'...
+100%|██████████| 5.30M/5.30M [00:02<00:00, 2.22MB/s]
+New https://pypi.org/project/ultralytics/8.1.38 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics YOLOv8.1.35 🚀 Python-3.10.14 torch-2.2.2 CPU (Apple M1 Pro)
+engine/trainer: task=classify, mode=train, model=yolov8n-cls.pt, data=./data/, epochs=500, time=None, patience=100, batch=16, imgsz=64, save=True, save_period=-1, cache=False, device=None, workers=8, project=None, name=train3, exist_ok=False, pretrained=True, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=False, opset=None, workspace=4, nms=False, lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, label_smoothing=0.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=/Users/tuan/Downloads/web_components_classify/runs/classify/train3
+train: /Users/tuan/Downloads/web_components_classify/data/train... found 358 images in 3 classes ✅ 
+val: /Users/tuan/Downloads/web_components_classify/data/val... found 104 images in 3 classes ✅ 
+test: /Users/tuan/Downloads/web_components_classify/data/test... found 53 images in 3 classes ✅ 
+Overriding model.yaml nc=1000 with nc=3
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]                 
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]                
+  2                  -1  1      7360  ultralytics.nn.modules.block.C2f             [32, 32, 1, True]             
+  3                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]                
+  4                  -1  2     49664  ultralytics.nn.modules.block.C2f             [64, 64, 2, True]             
+  5                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+  6                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]           
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
+  8                  -1  1    460288  ultralytics.nn.modules.block.C2f             [256, 256, 1, True]           
+  9                  -1  1    334083  ultralytics.nn.modules.head.Classify         [256, 3]                      
+YOLOv8n-cls summary: 99 layers, 1442131 parameters, 1442131 gradients, 3.4 GFLOPs
+Transferred 156/158 items from pretrained weights
+train: Scanning /Users/tuan/Downloads/web_components_classify/data/train... 358 images, 0 corrupt: 100%|██████████| 358/358 [00:00<?, ?it/s]
+val: Scanning /Users/tuan/Downloads/web_components_classify/data/val... 104 images, 0 corrupt: 100%|██████████| 104/104 [00:00<?, ?it/s]
+optimizer: 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically... 
+optimizer: AdamW(lr=0.000714, momentum=0.9) with parameter groups 26 weight(decay=0.0), 27 weight(decay=0.0005), 27 bias(decay=0.0)
+Image sizes 64 train, 64 val
+Using 0 dataloader workers
+Logging results to /Users/tuan/Downloads/web_components_classify/runs/classify/train3
+Starting training for 500 epochs...
+
+      Epoch    GPU_mem       loss  Instances       Size
+
+      1/500         0G      1.159          6         64: 100%|██████████| 23/23 [00:03<00:00,  7.01it/s]
+               classes   top1_acc   top5_acc: 100%|██████████| 4/4 [00:00<00:00,  7.49it/s]
+                   all      0.385          1
